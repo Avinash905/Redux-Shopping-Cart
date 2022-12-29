@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&family=Roboto&family=Roboto+Condensed&family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav {
+  background-color: #303030;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar {
+  margin: 0 auto;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 3rem;
+  text-transform: uppercase;
+}
+
+.home-cont {
+  margin: 1rem auto;
+  width: 80vw;
+}
+
+.products-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
+  transition: all 0.2s linear;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  padding: 1rem;
+  width: 175px;
+  height: 220px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.price {
+  font-size: 1.2rem;
+}
+
+.addcart {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  transition: all 70ms linear;
+  margin: 0.5rem 0;
+}
+
+.addcart:active {
+  transform: scale(0.95);
+}
+
+.cart-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart {
+  width: 80vw;
+}
+
+.cart-card {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
+}
+
+.prod-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.cart-card img {
+  width: 8%;
+  margin-right: 5rem;
+}
+
+.cart-card button {
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  height: 60%;
+}
+
+.amount {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.24);
+  height: 91vh;
+  width: 20vw;
+  display: flex;
+  padding-left: 2rem;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.amount p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.amount h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+
+.noitems,
+.loading {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.incdec {
+  display: flex;
+}
+
+.qnty {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1025px) {
+  .amount p {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .amount h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+
+  .cart-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .prod-details {
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .cart-card img {
+    width: 20%;
+    margin: 1rem;
+  }
+
+  .amount {
+    height: auto;
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    padding-left: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .amount p {
+    font-size: 1.5rem;
+  }
+
+  .amount h3 {
+    font-size: 1.8rem;
+  }
+
+  .cart-card button {
+    height: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 70%;
   }
 }
